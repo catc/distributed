@@ -1,0 +1,18 @@
+[run]
+init_cmds = [
+	["go", "build"],
+	["./distributed"]
+]									# Commands run in start
+watch_all = true					# Watch all sub-directories
+watch_dirs = ["./"]					# Directories to watch
+watch_exts = [".go"]				# Extensions to watch
+ignore = [".git", "node_modules", "vendor"] 	# Directories to exclude from watching
+ignore_files = []					# Regexps for ignoring specific notifies
+build_delay = 300					# Minimal interval to Trigger build event
+interrupt_timout = 15				# Time to wait until force kill
+graceful_kill = false				# Wait for exit and before directly kill
+cmds = [
+	["clear"],
+	["go", "build"],
+	["./distributed"]
+]									# Commands to run
